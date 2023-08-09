@@ -20,10 +20,10 @@ jobs:
           python-version: 3.11
 
       - name: Build Docker Image
-        run: docker build -t neerajtiwari/flask-app:${{ github.sha }} .
+        run: docker build -t neerajtiwari/event-handler:${{ GITHUB_RUN_NUMBER }} .
 
       - name: Log in to Docker Hub
         run: docker login -u "${{ secrets.DOCKER_USER }}" -p "${{ secrets.DOCKER_PASSWORD }}"
 
       - name: Push Docker Image
-        run: docker push neerajtiwari/flask-app:${{ github.sha }}
+        run: docker push neerajtiwari/event-handler:${{ GITHUB_RUN_NUMBER }}

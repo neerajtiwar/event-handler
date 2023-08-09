@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-handler
+  namespace: event-handler
+  labels:
+    application: event-handler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: event-handler
+  template:
+    metadata:
+      labels:
+        application: event-handler
+    spec:
+      initContainers:
+      containers:
+        - name: event-handler
+          env:
+          image: docker.io/neerajtiwari/flask-app:8e6e8fb2556b0a73f28aae7cef60ed17b4188022
+          ports:
+            - containerPort: 8001
+          resources:
+            requests:
+              cpu: 20m
+              memory: 128Mi
+            limits:
+              cpu: 20m
+              memory: 128Mi
