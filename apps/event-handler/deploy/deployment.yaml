@@ -19,7 +19,7 @@ spec:
       containers:
         - name: event-handler
           env:
-          image: docker.io/neerajtiwari/flask-app:8e6e8fb2556b0a73f28aae7cef60ed17b4188022
+          image: docker.io/neerajtiwari/event-handler:97176696b90ece9100cf11b2cb4fba2dada48f93
           ports:
             - containerPort: 8001
           resources:
