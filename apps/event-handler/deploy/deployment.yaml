@@ -19,7 +19,7 @@ spec:
       containers:
         - name: event-handler
           env:
-          image: docker.io/neerajtiwari/event-handler:b25fcb418d2187e5aa2f79a18d107b36ed91bf94
+          image: docker.io/neerajtiwari/event-handler:5b4df3b10e9cadb6d5cbc3d145f0437495e7e9e1
           ports:
             - containerPort: 8001
           resources:
