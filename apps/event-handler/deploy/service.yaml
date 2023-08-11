@@ -10,5 +10,4 @@ spec:
       port: 80
       targetPort: 8001
   selector:
-    app:
-      kubernetes.io/application: event-handler
+    kubernetes.io/application: event-handler
