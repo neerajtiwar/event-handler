@@ -4,7 +4,9 @@ metadata:
   name: event-handler
   namespace: flask-project
   labels:
-    application: event-handler
+    app.kubernetes.io/component: event-handler
+    app.kubernetes.io/name: event-handler
+    app.kubernetes.io/part-of: flask-project
 spec:
   replicas: 1
   selector:
