@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        application: event-handler
+        app.kubernetes.io/name: event-handler
     spec:
       initContainers:
       containers:
