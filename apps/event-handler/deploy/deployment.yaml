@@ -11,7 +11,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      application: event-handler
+      app.kubernetes.io/name: event-handler
   template:
     metadata:
       labels:
