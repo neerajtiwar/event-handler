@@ -9,7 +9,7 @@ spec:
   project: flask-project
   source:
     # Repo where the gitops repo exist
-    repoURL: ssh://git@github.com/neerajtiwar/event-handler.git
+    repoURL: git@github.com:neerajtiwar/event-handler.git
     targetRevision: main
     # Path where the specific environment exists
     path: apps/event-handler/deploy
